@@ -218,3 +218,8 @@ ul{margin:0;padding:0;list-style:none}
 .gallery figure{margin:0}
 .gallery img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 40%;border-radius:20px;border:1px solid var(--border)}
 @media (max-width:640px){.gallery{grid-template-columns:1fr}}
+
+/* Главная: скрыть кнопки первого экрана на телефоне */
+@media (max-width: 768px) {
+  .hero__actions--main { display: none; }
+}
