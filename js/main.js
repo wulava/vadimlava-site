@@ -6,6 +6,7 @@
   // Мобильное меню
   var burger = document.getElementById('burger');
   var nav = document.getElementById('nav');
+  if (burger && nav) {
   function setMenu(open) {
     nav.classList.toggle('is-open', open);
     burger.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -23,6 +24,8 @@
   window.addEventListener('resize', function () {
     if (window.innerWidth > 900) setMenu(false);
   });
+
+  }
 
   // Плавное появление блоков (при ?static показываем всё сразу — для скриншотов)
   var items = document.querySelectorAll('.reveal');
@@ -44,6 +47,7 @@
   }
 
   // Подсветка пункта меню по прокрутке
+  if (!nav) return;
   var links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
   var map = {};
   links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
