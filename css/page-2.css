@@ -1,0 +1,125 @@
+/* Стили только для /2/. /1/ и корневая заглушка этот файл не подключают.
+   Портрет на десктопе растворяется в собственном студийном чёрном (#0a0a0d). */
+
+.page-2 {
+  --photo-bg: #0a0a0d;
+  background-image: none;
+}
+
+/* Красное свечение остаётся на текстовой стороне и гаснет до фото. */
+.page-2 .hero {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--photo-bg);
+  background-image: linear-gradient(90deg, #000 0%, #000 28%, var(--photo-bg) 46%, var(--photo-bg) 100%);
+}
+
+.page-2 .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 78% 85% at 8% 0%, rgba(138, 4, 6, .58), rgba(138, 4, 6, .18) 40%, transparent 62%);
+  -webkit-mask-image: linear-gradient(90deg, #fff 0%, #fff 34%, transparent 50%);
+  mask-image: linear-gradient(90deg, #fff 0%, #fff 34%, transparent 50%);
+}
+
+.page-2 .hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.page-2 .hero__photo--portrait::after {
+  content: none;
+}
+
+/* Десктоп: вертикальный портрет без рамки, тени и обводки. */
+@media (min-width: 901px) {
+  .page-2 .hero {
+    padding: 24px 0 28px;
+  }
+
+  /* Низ героя возвращается к чёрному страницы, без шва под фото. */
+  .page-2 .hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent, #000);
+  }
+
+  .page-2 .hero__photo--portrait {
+    justify-self: end;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    background: none;
+  }
+
+  .page-2 .hero__photo--portrait img {
+    width: min(100%, calc((100vh - var(--header-h) - 72px) * 2 / 3));
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: contain;
+    object-position: center;
+    /* Маска непрозрачна на фигуре и гаснет только по пустому студийному краю. */
+    -webkit-mask-image: url(/images/portrait-fade-mask.png);
+    mask-image: url(/images/portrait-fade-mask.png);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-mode: alpha;
+  }
+}
+
+/* Мобильный: вертикальное фото 2/3 в полный рост, с красной рамкой из основного стиля. */
+@media (max-width: 900px) {
+  .page-2 {
+    background-image: radial-gradient(ellipse 80% 40% at 50% 0, rgba(138, 4, 6, .45), transparent 70%);
+  }
+
+  .page-2 .hero {
+    background: none;
+  }
+
+  .page-2 .hero::before {
+    content: none;
+  }
+
+  .page-2 .hero__photo--portrait img {
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+/* Второй портрет в «Обо мне»: без рамки, края в чёрный фон секции. */
+.page-2 .portrait-blend {
+  margin: clamp(48px, 7vw, 88px) auto 0;
+  width: min(440px, 86%);
+  background: none;
+}
+
+.page-2 .portrait-blend img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-mask-image: url(/images/portrait-fade-mask.png);
+  mask-image: url(/images/portrait-fade-mask.png);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-mode: alpha;
+}
