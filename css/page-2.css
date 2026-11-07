@@ -123,3 +123,11 @@
   mask-repeat: no-repeat;
   mask-mode: alpha;
 }
+
+/* Мобильный «Обо мне»: верх и бока мягко гаснут в чёрный. Десктоп остаётся на маске выше. */
+@media (max-width: 900px) {
+  .page-2 .portrait-blend img {
+    -webkit-mask-image: url(/images/portrait-fade-mask-mobile.png);
+    mask-image: url(/images/portrait-fade-mask-mobile.png);
+  }
+}
