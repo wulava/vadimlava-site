@@ -87,8 +87,10 @@
   }
 
   .page-1 .hero {
-    background-color: var(--photo-bg);
+    /* Низ героя — тот же чистый чёрный, что у следующей секции. Красное свечение только сверху. */
+    background-color: #000;
     background-image: radial-gradient(ellipse 140% 42% at 50% 0%, rgba(138, 4, 6, .55), rgba(138, 4, 6, .16) 38%, transparent 62%);
+    padding-bottom: 0;
   }
 
   .page-1 .hero::before {
@@ -111,8 +113,8 @@
     aspect-ratio: 2 / 3;
     object-fit: cover;
     object-position: center center;
-    -webkit-mask-image: url(/images/portrait-fade-mask-mobile.png);
-    mask-image: url(/images/portrait-fade-mask-mobile.png);
+    -webkit-mask-image: url(/images/portrait-fade-mask-hero-mobile.png);
+    mask-image: url(/images/portrait-fade-mask-hero-mobile.png);
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
     -webkit-mask-repeat: no-repeat;
