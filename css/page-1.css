@@ -1,0 +1,154 @@
+/* Стили только для /1/. Скопированы с page-2.css и не подключаются на /2/.
+   Портрет на десктопе растворяется в собственном студийном чёрном (#0a0a0d). */
+
+.page-1 {
+  --photo-bg: #0a0a0d;
+  background-image: none;
+}
+
+/* Красное свечение остаётся на текстовой стороне и гаснет до фото. */
+.page-1 .hero {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--photo-bg);
+  background-image: linear-gradient(90deg, #000 0%, #000 28%, var(--photo-bg) 46%, var(--photo-bg) 100%);
+}
+
+.page-1 .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 78% 85% at 8% 0%, rgba(138, 4, 6, .58), rgba(138, 4, 6, .18) 40%, transparent 62%);
+  -webkit-mask-image: linear-gradient(90deg, #fff 0%, #fff 34%, transparent 50%);
+  mask-image: linear-gradient(90deg, #fff 0%, #fff 34%, transparent 50%);
+}
+
+.page-1 .hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.page-1 .hero__photo--portrait::after {
+  content: none;
+}
+
+/* Десктоп: вертикальный портрет без рамки, тени и обводки. */
+@media (min-width: 901px) {
+  .page-1 .hero {
+    padding: 24px 0 28px;
+  }
+
+  /* Низ героя возвращается к чёрному страницы, без шва под фото. */
+  .page-1 .hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent, #000);
+  }
+
+  .page-1 .hero__photo--portrait {
+    justify-self: end;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    background: none;
+  }
+
+  .page-1 .hero__photo--portrait img {
+    width: min(100%, calc((100vh - var(--header-h) - 72px) * 2 / 3));
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: contain;
+    object-position: center;
+    /* Маска непрозрачна на фигуре и гаснет только по пустому студийному краю. */
+    -webkit-mask-image: url(/images/portrait-fade-mask.png);
+    mask-image: url(/images/portrait-fade-mask.png);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-mode: alpha;
+  }
+}
+
+/* Мобильный герой: портрет без рамки, на студийном чёрном, края как у блока «Обо мне» на /2. */
+@media (max-width: 900px) {
+  .page-1 {
+    background-color: #000;
+    background-image: none;
+  }
+
+  .page-1 .hero {
+    background-color: var(--photo-bg);
+    background-image: radial-gradient(ellipse 140% 42% at 50% 0%, rgba(138, 4, 6, .55), rgba(138, 4, 6, .16) 38%, transparent 62%);
+  }
+
+  .page-1 .hero::before {
+    content: none;
+  }
+
+  .page-1 .hero__photo--portrait {
+    justify-self: center;
+    width: min(440px, 86%);
+    margin: 12px auto 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    background: none;
+  }
+
+  .page-1 .hero__photo--portrait img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    object-position: center center;
+    -webkit-mask-image: url(/images/portrait-fade-mask-mobile.png);
+    mask-image: url(/images/portrait-fade-mask-mobile.png);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-mode: alpha;
+  }
+}
+
+/* Второй портрет в «Обо мне»: без рамки, края в чёрный фон секции. */
+.page-1 .portrait-blend {
+  margin: clamp(48px, 7vw, 88px) auto 0;
+  width: min(440px, 86%);
+  background: none;
+}
+
+.page-1 .portrait-blend img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-mask-image: url(/images/portrait-fade-mask.png);
+  mask-image: url(/images/portrait-fade-mask.png);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-mode: alpha;
+}
+
+/* Мобильный «Обо мне»: верх и бока мягко гаснут в чёрный. Десктоп остаётся на маске выше. */
+@media (max-width: 900px) {
+  .page-1 .portrait-blend img {
+    -webkit-mask-image: url(/images/portrait-fade-mask-mobile.png);
+    mask-image: url(/images/portrait-fade-mask-mobile.png);
+  }
+}
