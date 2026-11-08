@@ -131,3 +131,32 @@
     mask-image: url(/images/portrait-fade-mask-mobile.png);
   }
 }
+
+/* Точки перед строками героя — и на компьютере, и на телефоне. */
+.page-2 .hero__lead--phone { display: none; }
+.page-2 .hero__lead span::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 0.45em;
+  border-radius: 50%;
+  background: var(--red);
+  vertical-align: 0.12em;
+}
+@media (max-width: 900px) {
+  .page-2 .hero__lead--desk { display: none; }
+  .page-2 .hero__lead--phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    max-width: none;
+    font-size: clamp(12.5px, 3.85vw, 15.5px);
+    line-height: 1.35;
+  }
+  .page-2 .hero__lead--phone span {
+    display: block;
+    white-space: nowrap;
+  }
+}
