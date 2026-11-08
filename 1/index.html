@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{if(localStorage.getItem('vl-view')==='pc'){document.querySelector('meta[name=viewport]').setAttribute('content','width=1280');}}catch(e){}</script>
 <title>Вадим Лавлинский — тренер по Ушу и Кунг-фу</title>
 <meta name="description" content="Чемпион Мира по Кунг-фу. Директор ПАУК, руководитель АКБИ, организатор поездок WuWay и Турнира «Кайши».">
 <meta name="theme-color" content="#000000">
@@ -361,11 +362,29 @@
       <p>ОГРН 1262200010973 · ИНН 2225240164</p>
       <!-- Реквизиты по данным ЕГРЮЛ (через checko.ru, 28.10.2026). Юр. адрес на сайте не указан по решению заказчика; ИП не указан. -->
       <p class="footer__copy">© 2026 Вадим Лавлинский. Сайт-черновик.</p>
+      <button type="button" class="view-toggle" id="viewToggle">Версия для ПК</button>
       <!-- ЗАГЛУШКА: политика конфиденциальности (ссылка на страницу) нужна, когда появится форма записи или сбор данных. На старом сайте есть /privacy-policy. -->
     </div>
   </div>
 </footer>
 
 <script src="/js/main.js"></script>
+<script>
+(function(){
+  var b=document.getElementById('viewToggle'); if(!b) return;
+  var pc=false; try{pc=localStorage.getItem('vl-view')==='pc';}catch(e){}
+  var phone=Math.min(screen.width,screen.height)<900;
+  if(phone||pc){
+    b.textContent=pc?'Мобильная версия':'Версия для ПК';
+    b.onclick=function(){
+      try{ if(pc){localStorage.removeItem('vl-view');}else{localStorage.setItem('vl-view','pc');} }catch(e){}
+      location.reload();
+    };
+  } else {
+    b.textContent='Мобильная версия';
+    b.onclick=function(){ window.open(location.href,'vl_mobile','width=390,height=844'); };
+  }
+})();
+</script>
 </body>
 </html>
