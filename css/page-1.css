@@ -55,20 +55,19 @@
 /* Десктоп: вертикальный портрет без рамки, тени и обводки.
    Колонка текста шире, фото правее — длинные строки не переносятся. */
 @media (min-width: 901px) {
-  .page-1 .header > .container,
-  .page-1 .hero > .container {
-    width: calc(100% - clamp(36px, 3.2vw, 96px));
-    max-width: 2400px;
-  }
+  /* Герой той же ширины, что блоки ниже (.container). Шрифт считается от ширины
+     текстовой колонки (cqi), поэтому строки всегда помещаются в одну. */
   .page-1 .hero__inner {
     grid-template-columns: minmax(0, 1.42fr) minmax(0, 0.72fr);
     gap: clamp(16px, 1.6vw, 48px);
     align-items: center;
   }
-  .page-1 .hero__text { min-width: 0; }
+  .page-1 .hero__text { min-width: 0; container-type: inline-size; }
+  .page-1 .hero .eyebrow { font-size: clamp(12px, 1.9cqi, 18px); }
+  .page-1 .hero h1 { font-size: 7.4cqi; }
   .page-1 .hero__lead--desk {
     max-width: none;
-    font-size: clamp(16px, 1.9vw, 52px);
+    font-size: 3.05cqi;
     line-height: 1.45;
   }
   .page-1 .hero__lead--desk span {
@@ -102,7 +101,7 @@
 
   .page-1 .hero__photo--portrait img {
     width: auto;
-    max-width: min(100%, 30vw);
+    max-width: 100%;
     max-height: calc(100vh - var(--header-h) - 64px);
     height: auto;
     aspect-ratio: 2 / 3;
