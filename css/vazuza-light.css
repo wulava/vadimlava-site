@@ -1,0 +1,96 @@
+/* Светлая тема для /vazuza2/. Подключается после style.css и vazuza.css. */
+
+.page-vazuza-light {
+  --bg: #f6f1ea;
+  --bg-2: #efe8de;
+  --card: #fffdf9;
+  --border: rgba(40, 24, 16, .12);
+  --text: #1c1612;
+  --muted: #5f574f;
+  --red: #f0070b;
+  --red-2: #c70509;
+  --red-dark: #8a0406;
+  background-color: var(--bg);
+  background-image: radial-gradient(ellipse 80% 36% at 50% 0, rgba(240, 7, 11, .10), transparent 70%);
+  color: var(--text);
+}
+
+.page-vazuza-light .header {
+  background: rgba(246, 241, 234, .88);
+  border-bottom-color: var(--border);
+}
+.page-vazuza-light .nav a:hover,
+.page-vazuza-light .nav a.is-active {
+  color: var(--text);
+  background: rgba(28, 22, 18, .06);
+}
+.page-vazuza-light .burger { border-color: var(--border); }
+.page-vazuza-light .burger span { background: var(--text); }
+
+.page-vazuza-light .btn--ghost {
+  border-color: rgba(28, 22, 18, .22);
+  color: var(--text);
+  background: rgba(255, 255, 255, .55);
+}
+.page-vazuza-light .btn--ghost:hover {
+  background: #fff;
+  border-color: var(--red);
+}
+
+.page-vazuza-light .section--alt {
+  background: linear-gradient(180deg, var(--bg-2), var(--bg));
+  border-top-color: var(--border);
+  border-bottom-color: var(--border);
+}
+.page-vazuza-light .section--contact {
+  background: radial-gradient(ellipse 70% 90% at 50% 100%, rgba(240, 7, 11, .10), transparent 70%);
+}
+
+.page-vazuza-light .card p,
+.page-vazuza-light .vz-story p,
+.page-vazuza-light .vz-story li,
+.page-vazuza-light .vz-faq__body,
+.page-vazuza-light .contacts__lead {
+  color: #3d3732;
+}
+.page-vazuza-light .vz-faq__body b,
+.page-vazuza-light .vz-faq__label {
+  color: var(--text);
+}
+
+.page-vazuza-light .footer {
+  background: #efe8de;
+  border-top-color: var(--border);
+}
+
+.page-vazuza-light .view-toggle {
+  border-color: rgba(28, 22, 18, .25);
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .page-vazuza-light .nav {
+    background: rgba(246, 241, 234, .98);
+    border-bottom-color: var(--border);
+  }
+}
+
+/* Герой и призыв остаются тёмными поверх фото, текст белый. */
+.page-vazuza-light .vz-hero h1,
+.page-vazuza-light .vz-cta h2 { color: #fff; }
+.page-vazuza-light .vz-hero__lead { color: #ececec; }
+
+/* Фото чуть мягче сидят на тёплом фоне. */
+.page-vazuza-light .vz-story img,
+.page-vazuza-light .vz-gallery button,
+.page-vazuza-light .vz-reviews button,
+.page-vazuza-light .vz-map {
+  box-shadow: 0 10px 28px rgba(40, 24, 16, .08);
+}
+.page-vazuza-light .vz-coach img {
+  border-bottom: 1px solid var(--border);
+}
+.page-vazuza-light .card:hover,
+.page-vazuza-light .vz-reviews button:hover {
+  border-color: rgba(240, 7, 11, .45);
+}
