@@ -1,0 +1,159 @@
+/* Только для /vazuza2/. Общий css/vazuza.css и /vazuza не меняем. */
+
+/* ---------- Слайдеры (галерея и отзывы) ---------- */
+.vz2-slider { position: relative; max-width: 100%; min-width: 0; }
+.vz2-slider__viewport { position: relative; min-width: 0; }
+.vz2-slider__track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  touch-action: pan-x;
+}
+.vz2-slider__track::-webkit-scrollbar { display: none; }
+.vz2-slider__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.vz2-slider--double .vz2-slider__slide { flex-basis: 100%; }
+
+@media (min-width: 640px) {
+  .vz2-slider--double .vz2-slider__slide { flex-basis: calc((100% - 12px) / 2); }
+}
+
+.vz2-slider__slide > button {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--card);
+  cursor: zoom-in;
+}
+.vz2-slider__slide > button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+.vz2-slider--gallery .vz2-slider__slide img {
+  width: 100%;
+  aspect-ratio: 1600 / 765;
+  object-fit: cover;
+  object-position: center;
+}
+.vz2-slider--reviews .vz2-slider__slide img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.vz2-slider__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 50%;
+  background: rgba(0,0,0,.62);
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.vz2-slider__arrow:hover { background: var(--red); border-color: var(--red); }
+.vz2-slider__arrow:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.vz2-slider__arrow:disabled { opacity: .35; cursor: default; background: rgba(0,0,0,.45); }
+.vz2-slider__arrow:disabled:hover { background: rgba(0,0,0,.45); border-color: rgba(255,255,255,.22); }
+.vz2-slider__arrow--prev { left: 10px; }
+.vz2-slider__arrow--next { right: 10px; }
+.vz2-slider__arrow svg { display: block; width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+.vz2-slider__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.vz2-slider__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.32);
+  cursor: pointer;
+}
+.vz2-slider__dot:hover { background: rgba(255,255,255,.6); }
+.vz2-slider__dot.is-active { background: var(--red); transform: scale(1.2); }
+.vz2-slider__dot:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+@media (max-width: 639px) {
+  .vz2-slider__arrow { width: 38px; height: 38px; }
+  .vz2-slider__arrow--prev { left: 6px; }
+  .vz2-slider__arrow--next { right: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vz2-slider__track { scroll-behavior: auto; }
+}
+
+/* ---------- Тренеры: только телефон, ПК без изменений ---------- */
+@media (max-width: 900px) {
+  .page-vazuza2 .vz-coaches {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .page-vazuza2 .vz-coach,
+  .page-vazuza2 .card.vz-coach {
+    display: block;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+  .page-vazuza2 .vz-coach::after { display: none; }
+  .page-vazuza2 .vz-coach:hover {
+    transform: none;
+    border: none;
+    background: transparent;
+  }
+  .page-vazuza2 .vz-coach figure {
+    margin: 0 0 16px;
+    width: 100%;
+  }
+  .page-vazuza2 .vz-coach img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .page-vazuza2 .vz-coach h3 {
+    margin: 0 0 10px;
+    text-align: left;
+  }
+  .page-vazuza2 .vz-coach ul {
+    margin: 0;
+    text-align: left;
+  }
+}
