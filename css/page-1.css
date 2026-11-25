@@ -236,3 +236,9 @@
   background: var(--red);
   vertical-align: 0.12em;
 }
+
+/* Три карточки партнёров: ровная сетка после удаления ПАУК. */
+.page-1 .cards--3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) {
+  .page-1 .cards--3 { grid-template-columns: 1fr; }
+}
