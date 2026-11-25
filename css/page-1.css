@@ -274,3 +274,22 @@
   list-style: none;
 }
 
+
+
+/* Кнопка «Записаться на пробное занятие» — по центру блока залов. */
+.page-1 .halls {
+  display: flex;
+  flex-direction: column;
+}
+.page-1 .halls > .btn {
+  align-self: center;
+  width: auto;
+}
+
+/* ПК: слабее красный градиент у карточки «Кайши», чтобы кнопка лучше читалась. Мобильную не меняем. */
+@media (min-width: 901px) {
+  .page-1 .event--main {
+    background: linear-gradient(120deg, rgba(138, 4, 6, .22), rgba(255, 255, 255, .03) 55%);
+    border-color: rgba(240, 7, 11, .28);
+  }
+}
