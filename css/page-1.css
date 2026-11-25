@@ -253,3 +253,24 @@
 }
 .page-1 .badge-row .badge { margin: 0; }
 
+/* Овалы «Личные достижения» / «Достижения учеников» — как теги «Сборы» и «Поездки». */
+.page-1 .about__text .achievements {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.page-1 .about__text .achievements .event__tag {
+  margin: 6px 0 2px;
+  justify-self: start;
+}
+.page-1 .about__text .achievements .event__tag:first-child {
+  margin-top: 0;
+}
+.page-1 .about__text .achievements ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
