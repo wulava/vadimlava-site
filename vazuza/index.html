@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>try{if(localStorage.getItem('vl-view')==='pc'){document.querySelector('meta[name=viewport]').setAttribute('content','width=1280');}}catch(e){}</script>
 <title>УТС на Вазузе — Вадим Лавлинский</title>
-<meta name="description" content="Учебно-тренировочные сборы на Вазузском водохранилище. 26 июля — 8 августа 2026, ориентир — г. Зубцов. Тренировки по ушу и кунг-фу, питание, досуг.">
+<meta name="description" content="Учебно-тренировочные сборы на Вазузском водохранилище. 25 июля — 14 августа 2027, ориентир — г. Зубцов. Тренировки по ушу и кунг-фу, питание, досуг.">
 <meta name="theme-color" content="#000000">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://vadimlava.ru/vazuza/">
@@ -15,14 +15,14 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Вадим Лавлинский">
 <meta property="og:title" content="УТС на Вазузе">
-<meta property="og:description" content="Учебно-тренировочные сборы на Вазузском водохранилище. 26 июля — 8 августа 2026, ориентир — г. Зубцов.">
+<meta property="og:description" content="Учебно-тренировочные сборы на Вазузском водохранилище. 25 июля — 14 августа 2027, ориентир — г. Зубцов.">
 <meta property="og:url" content="https://vadimlava.ru/vazuza/">
 <meta property="og:image" content="https://vadimlava.ru/images/vazuza/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="УТС на Вазузе">
-<meta name="twitter:description" content="Учебно-тренировочные сборы на Вазузском водохранилище. 26 июля — 8 августа 2026, ориентир — г. Зубцов.">
+<meta name="twitter:description" content="Учебно-тренировочные сборы на Вазузском водохранилище. 25 июля — 14 августа 2027, ориентир — г. Зубцов.">
 <meta name="twitter:image" content="https://vadimlava.ru/images/vazuza/og.jpg">
 
 <!-- Favicon -->
@@ -35,6 +35,7 @@
 <link rel="preload" href="/images/vazuza/hero.webp" as="image" fetchpriority="high">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/vazuza.css">
+<link rel="stylesheet" href="/css/vazuza2.css">
 
 
 <script type="application/ld+json">
@@ -43,8 +44,8 @@
   "@type": "Event",
   "name": "УТС на Вазузе",
   "description": "Учебно-тренировочные сборы на Вазузском водохранилище.",
-  "startDate": "2026-07-26",
-  "endDate": "2026-08-08",
+  "startDate": "2027-07-25",
+  "endDate": "2027-08-14",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "image": "https://vadimlava.ru/images/vazuza/og.jpg",
@@ -62,18 +63,18 @@
   "organizer": {
     "@type": "Person",
     "name": "Вадим Лавлинский",
-    "url": "https://vadimlava.ru/1/"
+    "url": "https://vadimlava.ru/vazuza/"
   }
 }
 </script>
 </head>
-<body class="page-vazuza">
+<body class="page-vazuza page-vazuza2">
 
 <a class="skip" href="#main">К содержимому</a>
 
 <header class="header" id="top">
   <div class="container header__inner">
-    <a class="brand" href="/1/" aria-label="Вадим Лавлинский — на главную">
+    <a class="brand" href="/vazuza/" aria-label="Вадим Лавлинский">
       <span class="brand__mark" aria-hidden="true"></span>
       <span class="brand__text">Вадим Лавлинский</span>
     </a>
@@ -84,7 +85,7 @@
       <a href="#coaches">Тренеры</a>
       <a href="#faq">ЧаВо</a>
       <a href="#reviews">Отзывы</a>
-      <a href="https://vk.ru/vadimlava" class="nav__cta" target="_blank" rel="noopener">Записаться</a>
+      <a href="#zapis" class="nav__cta js-open-signup">Записаться</a>
     </nav>
     <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
       <span></span><span></span><span></span>
@@ -103,7 +104,7 @@
     <h1>УТС на Вазузе</h1>
     <p class="vz-hero__lead">Учебно-тренировочные сборы на Вазузском водохранилище</p>
     <div class="hero__actions">
-      <a class="btn btn--primary" href="https://vk.ru/vadimlava" target="_blank" rel="noopener">Записаться</a>
+      <a class="btn btn--primary js-open-signup" href="#zapis">Записаться</a>
     </div>
   </div>
 </section>
@@ -115,24 +116,69 @@
       <p class="eyebrow">Фото</p>
       <h2>Галерея</h2>
     </header>
-    <div class="vz-gallery reveal">
-    <button type="button" data-full="/images/vazuza/gallery-01.webp"><img src="/images/vazuza/gallery-01.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 1" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-02.webp"><img src="/images/vazuza/gallery-02.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 2" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-03.webp"><img src="/images/vazuza/gallery-03.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 3" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-04.webp"><img src="/images/vazuza/gallery-04.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 4" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-05.webp"><img src="/images/vazuza/gallery-05.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 5" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-06.webp"><img src="/images/vazuza/gallery-06.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 6" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-07.webp"><img src="/images/vazuza/gallery-07.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 7" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-08.webp"><img src="/images/vazuza/gallery-08.webp" width="1600" height="764" alt="Учебно-тренировочные сборы на Вазузе, фото 8" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-09.webp"><img src="/images/vazuza/gallery-09.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 9" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-10.webp"><img src="/images/vazuza/gallery-10.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 10" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-11.webp"><img src="/images/vazuza/gallery-11.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 11" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-12.webp"><img src="/images/vazuza/gallery-12.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 12" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-13.webp"><img src="/images/vazuza/gallery-13.webp" width="1200" height="574" alt="Учебно-тренировочные сборы на Вазузе, фото 13" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-14.webp"><img src="/images/vazuza/gallery-14.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 14" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-15.webp"><img src="/images/vazuza/gallery-15.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 15" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-16.webp"><img src="/images/vazuza/gallery-16.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 16" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/gallery-17.webp"><img src="/images/vazuza/gallery-17.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 17" loading="lazy"></button>
+        <div class="vz2-slider vz2-slider--gallery reveal" data-vz2-slider>
+      <div class="vz2-slider__viewport">
+      <button type="button" class="vz2-slider__arrow vz2-slider__arrow--prev" aria-label="Предыдущий слайд">
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2.5 4.5 7 9 11.5"/></svg>
+      </button>
+      <button type="button" class="vz2-slider__arrow vz2-slider__arrow--next" aria-label="Следующий слайд">
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5"/></svg>
+      </button>
+        <div class="vz2-slider__track" tabindex="0" role="region" aria-roledescription="карусель" aria-label="Галерея">
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-01.webp"><img src="/images/vazuza/gallery-01.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 1" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-02.webp"><img src="/images/vazuza/gallery-02.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 2" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-03.webp"><img src="/images/vazuza/gallery-03.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 3" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-04.webp"><img src="/images/vazuza/gallery-04.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 4" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-05.webp"><img src="/images/vazuza/gallery-05.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 5" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-06.webp"><img src="/images/vazuza/gallery-06.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 6" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-07.webp"><img src="/images/vazuza/gallery-07.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 7" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-08.webp"><img src="/images/vazuza/gallery-08.webp" width="1600" height="764" alt="Учебно-тренировочные сборы на Вазузе, фото 8" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-09.webp"><img src="/images/vazuza/gallery-09.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 9" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-10.webp"><img src="/images/vazuza/gallery-10.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 10" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-11.webp"><img src="/images/vazuza/gallery-11.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 11" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-12.webp"><img src="/images/vazuza/gallery-12.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 12" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-13.webp"><img src="/images/vazuza/gallery-13.webp" width="1200" height="574" alt="Учебно-тренировочные сборы на Вазузе, фото 13" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-14.webp"><img src="/images/vazuza/gallery-14.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 14" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-15.webp"><img src="/images/vazuza/gallery-15.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 15" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-16.webp"><img src="/images/vazuza/gallery-16.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 16" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/gallery-17.webp"><img src="/images/vazuza/gallery-17.webp" width="1600" height="765" alt="Учебно-тренировочные сборы на Вазузе, фото 17" loading="lazy"></button>
+        </div>
+        </div>
+      </div>
+      <div class="vz2-slider__dots" role="tablist" aria-label="Слайды"></div>
     </div>
   </div>
 </section>
@@ -458,8 +504,8 @@
     <img src="/images/vazuza/cta-bg.webp" width="1920" height="1066" alt="" loading="lazy">
   </div>
   <div class="container reveal">
-    <h2>Если хотите, чтобы Ваш ребенок провел 2 недели лета с пользой для тела и духа и получил массу приятных впечатлений — отправляйте на сборы с нами</h2>
-    <a class="btn btn--primary" href="https://vk.ru/vadimlava" target="_blank" rel="noopener">Записаться</a>
+    <h2>Если хотите, чтобы Ваш ребенок провел 3 недели лета с пользой для тела и духа и получил массу приятных впечатлений — отправляйте на сборы с нами</h2>
+    <a class="btn btn--primary js-open-signup" href="#zapis">Записаться</a>
   </div>
 </section>
 
@@ -470,13 +516,36 @@
       <p class="eyebrow">Что пишут</p>
       <h2>Отзывы</h2>
     </header>
-    <div class="vz-reviews reveal">
-    <button type="button" data-full="/images/vazuza/review-01.webp"><img src="/images/vazuza/review-01.webp" width="1200" height="1200" alt="Отзыв о сборах на Вазузе, 1" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/review-02.webp"><img src="/images/vazuza/review-02.webp" width="1055" height="1056" alt="Отзыв о сборах на Вазузе, 2" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/review-03.webp"><img src="/images/vazuza/review-03.webp" width="1200" height="1200" alt="Отзыв о сборах на Вазузе, 3" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/review-04.webp"><img src="/images/vazuza/review-04.webp" width="1042" height="1042" alt="Отзыв о сборах на Вазузе, 4" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/review-05.webp"><img src="/images/vazuza/review-05.webp" width="1087" height="1087" alt="Отзыв о сборах на Вазузе, 5" loading="lazy"></button>
-    <button type="button" data-full="/images/vazuza/review-06.webp"><img src="/images/vazuza/review-06.webp" width="1166" height="1166" alt="Отзыв о сборах на Вазузе, 6" loading="lazy"></button>
+        <div class="vz2-slider vz2-slider--reviews vz2-slider--double reveal" data-vz2-slider>
+      <div class="vz2-slider__viewport">
+      <button type="button" class="vz2-slider__arrow vz2-slider__arrow--prev" aria-label="Предыдущий слайд">
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M9 2.5 4.5 7 9 11.5"/></svg>
+      </button>
+      <button type="button" class="vz2-slider__arrow vz2-slider__arrow--next" aria-label="Следующий слайд">
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5"/></svg>
+      </button>
+        <div class="vz2-slider__track" tabindex="0" role="region" aria-roledescription="карусель" aria-label="Отзывы">
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/review-01.webp"><img src="/images/vazuza/review-01.webp" width="1200" height="1200" alt="Отзыв о сборах на Вазузе, 1" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/review-02.webp"><img src="/images/vazuza/review-02.webp" width="1055" height="1056" alt="Отзыв о сборах на Вазузе, 2" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/review-03.webp"><img src="/images/vazuza/review-03.webp" width="1200" height="1200" alt="Отзыв о сборах на Вазузе, 3" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/review-04.webp"><img src="/images/vazuza/review-04.webp" width="1042" height="1042" alt="Отзыв о сборах на Вазузе, 4" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/review-05.webp"><img src="/images/vazuza/review-05.webp" width="1087" height="1087" alt="Отзыв о сборах на Вазузе, 5" loading="lazy"></button>
+        </div>
+        <div class="vz2-slider__slide">
+          <button type="button" data-full="/images/vazuza/review-06.webp"><img src="/images/vazuza/review-06.webp" width="1166" height="1166" alt="Отзыв о сборах на Вазузе, 6" loading="lazy"></button>
+        </div>
+        </div>
+      </div>
+      <div class="vz2-slider__dots" role="tablist" aria-label="Слайды"></div>
     </div>
   </div>
 </section>
@@ -494,29 +563,38 @@
         <span>ориентир — г. Зубцов</span>
       </li>
       <li>
-        <span class="contact-list__label">Даты в 2026 году</span>
-        <span>26 июля — 8 августа</span>
-      </li>
-      <li>
-        <span class="contact-list__label">Телефон</span>
-        <a href="tel:+79175343717">+7 917 534-37-17</a>
-      </li>
-      <li>
-        <span class="contact-list__label">Почта</span>
-        <a href="mailto:vadimlava@pawk.ru">vadimlava@pawk.ru</a>
-      </li>
-      <li>
-        <span class="contact-list__label">ВКонтакте</span>
-        <a href="https://vk.ru/vadimlava" target="_blank" rel="noopener">vk.ru/vadimlava</a>
-      </li>
-      <li>
-        <span class="contact-list__label">Telegram</span>
-        <a href="https://t.me/vadimlava_pro" target="_blank" rel="noopener">t.me/vadimlava_pro</a>
+        <span class="contact-list__label">Даты в 2027 году</span>
+        <span>25 июля — 14 августа</span>
       </li>
     </ul>
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="https://vk.ru/vadimlava" target="_blank" rel="noopener">Записаться</a>
-      <a class="btn btn--ghost" href="tel:+79175343717">Позвонить</a>
+    <div class="vz2-signup" id="zapis">
+      <a class="btn btn--primary vz2-signup__btn" href="#signup-contacts" id="signupToggle" role="button" aria-expanded="false" aria-controls="signup-contacts">Записаться</a>
+      <div class="vz2-signup__panel" id="signup-contacts">
+        <div class="vz2-signup__panel-inner">
+          <ul class="contact-list">
+            <li>
+              <span class="contact-list__label">Телефон</span>
+              <a href="tel:+79175343717">+7 917 534-37-17</a>
+            </li>
+            <li>
+              <span class="contact-list__label">Почта</span>
+              <a href="mailto:vadimlava@pawk.ru">vadimlava@pawk.ru</a>
+            </li>
+            <li>
+              <span class="contact-list__label">ВКонтакте</span>
+              <a href="https://vk.ru/vadimlava" target="_blank" rel="noopener">vk.ru/vadimlava</a>
+            </li>
+            <li>
+              <span class="contact-list__label">Telegram</span>
+              <a href="https://t.me/vadimlava" target="_blank" rel="noopener">t.me/vadimlava</a>
+            </li>
+            <li>
+              <span class="contact-list__label">MAX</span>
+              <a href="https://max.ru/u/f9LHodD0cOJ7ANbC1PafoKnBYa4mlDvz8qBjpm6jYhuU04yztvBiYkyOMN0" target="_blank" rel="noopener">Написать в МАХ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="vz-map">
       <iframe title="Карта: ориентир — г. Зубцов, Тверская область" src="https://yandex.ru/map-widget/v1/?ll=34.582902%2C56.170536&amp;z=13&amp;pt=34.582902,56.170536,pm2rdm&amp;l=map" width="100%" height="360" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
@@ -537,8 +615,8 @@
       </div>
     </div>
     <div class="footer__legal">
-      <p>ООО «Профессиональный Альянс Ушу и Кунгфу» (ООО «ПАУК»)</p>
-      <p>ОГРН 1262200010973 · ИНН 2225240164</p>
+      <p>ИП Лавлинский Вадим Сергеевич</p>
+      <p>ОГРНИП 315222500006332 · ИНН 222510083542</p>
       <p class="footer__copy">© 2026 Вадим Лавлинский</p>
       <button type="button" class="view-toggle" id="viewToggle">Версия для ПК</button>
     </div>
@@ -554,6 +632,7 @@
 
 <script src="/js/main.js"></script>
 <script src="/js/vazuza.js"></script>
+<script src="/js/vazuza2.js"></script>
 <script>
 (function(){
   var b=document.getElementById('viewToggle'); if(!b) return;
