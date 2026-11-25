@@ -105,3 +105,85 @@
 
   document.querySelectorAll('[data-vz2-slider]').forEach(initSlider);
 })();
+
+(function () {
+  'use strict';
+  var box = document.getElementById('zapis');
+  var toggle = document.getElementById('signupToggle');
+  if (!box || !toggle) return;
+
+  var panel = document.getElementById('signup-contacts');
+  var inner = box.querySelector('.vz2-signup__panel-inner');
+
+  function setOpen(open) {
+    box.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (!panel || !inner) return;
+    if (open) {
+      panel.style.maxHeight = inner.scrollHeight + 'px';
+    } else {
+      panel.style.maxHeight = inner.scrollHeight + 'px';
+      panel.offsetHeight;
+      panel.style.maxHeight = '0px';
+    }
+  }
+
+  function isOpen() {
+    return box.classList.contains('is-open');
+  }
+
+  function afterScroll(fn) {
+    var done = false;
+    function finish() {
+      if (done) return;
+      done = true;
+      fn();
+    }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      finish();
+      return;
+    }
+    if ('onscrollend' in window) {
+      window.addEventListener('scrollend', finish, { once: true });
+    } else {
+      var last = window.pageYOffset;
+      var still = 0;
+      var id = setInterval(function () {
+        if (window.pageYOffset === last) {
+          still++;
+          if (still >= 4) { clearInterval(id); finish(); }
+        } else {
+          still = 0;
+          last = window.pageYOffset;
+        }
+      }, 50);
+      setTimeout(function () { clearInterval(id); finish(); }, 1200);
+    }
+    setTimeout(finish, 1400);
+  }
+
+  function scrollToSignup() {
+    box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  toggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    setOpen(!isOpen());
+  });
+
+  document.querySelectorAll('.js-open-signup').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var already = isOpen();
+      scrollToSignup();
+      afterScroll(function () {
+        if (!already) setOpen(true);
+        else setOpen(true);
+      });
+    });
+  });
+
+  if (location.hash === '#zapis' || location.hash === '#signup-contacts') {
+    setOpen(true);
+  }
+})();

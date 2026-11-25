@@ -157,3 +157,50 @@
     text-align: left;
   }
 }
+
+/* ---------- ЧаВо по центру только на ПК ---------- */
+@media (min-width: 901px) {
+  .page-vazuza2 #faq .section__head {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .page-vazuza2 #faq .vz-faq {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ---------- Раскрытие контактов под нижней «Записаться» ---------- */
+.vz2-signup { margin-top: 8px; max-width: 100%; }
+.vz2-signup__btn { position: relative; }
+.vz2-signup__btn::after {
+  content: "+";
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+  margin-left: 8px;
+}
+.vz2-signup.is-open .vz2-signup__btn::after { content: "–"; }
+.vz2-signup__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+}
+.vz2-signup__panel-inner { overflow: hidden; }
+.vz2-signup__panel-inner .contact-list { margin-top: 12px; margin-bottom: 0; }
+.vz2-signup.is-open .vz2-signup__panel,
+.vz2-signup__panel:target,
+#zapis:target .vz2-signup__panel {
+  max-height: 40rem;
+}
+.vz2-signup.is-open .vz2-signup__btn::after,
+#zapis:target .vz2-signup__btn::after {
+  content: "–";
+}
+@media (prefers-reduced-motion: reduce) {
+  .vz2-signup__panel { transition: none; }
+}
