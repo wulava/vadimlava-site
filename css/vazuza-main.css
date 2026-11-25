@@ -81,3 +81,67 @@
     padding: 0 16px;
   }
 }
+
+/* Мобильный «Тренерский состав» — как карточки «О базе». ПК не меняется. */
+@media (max-width: 900px) {
+  #coaches .vz-coaches {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(28px, 4vw, 48px);
+  }
+
+  #coaches .vz-coach,
+  #coaches .card.vz-coach {
+    display: block;
+    padding: clamp(16px, 2vw, 28px);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  #coaches .vz-coach::after { display: none; }
+
+  #coaches .vz-coach:hover {
+    transform: none;
+    border-color: var(--border);
+    background: var(--card);
+  }
+
+  #coaches .vz-coach figure {
+    margin: 0 0 clamp(20px, 4vw, 48px);
+    width: 100%;
+  }
+
+  #coaches .vz-coach img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: none;
+  }
+
+  #coaches .vz-coach h3 {
+    font-size: clamp(22px, 2.4vw, 30px);
+    margin: 0 0 12px;
+    text-align: left;
+  }
+
+  #coaches .vz-coach ul {
+    margin: 0;
+    display: grid;
+    gap: 6px;
+    text-align: left;
+  }
+
+  #coaches .vz-coach li {
+    font-size: inherit;
+    color: #dcdcde;
+    line-height: inherit;
+  }
+}
+
