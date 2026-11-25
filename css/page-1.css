@@ -242,3 +242,14 @@
 @media (max-width: 900px) {
   .page-1 .cards--3 { grid-template-columns: 1fr; }
 }
+
+/* Два овальных бейджа в блоке АКБИ: перенос на узком экране. */
+.page-1 .badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin: 6px 0 18px;
+}
+.page-1 .badge-row .badge { margin: 0; }
+

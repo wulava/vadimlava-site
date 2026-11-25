@@ -62,8 +62,8 @@
     </a>
     <nav class="nav" id="nav" aria-label="Основное меню">
       <a href="#about">Обо мне</a>
-      <a href="#directions">Направления</a>
       <a href="#classes">Занятия</a>
+      <a href="#directions">Наша специализация</a>
       <a href="#events">События</a>
       <a href="#partners">Партнёры</a>
       <a href="#contacts" class="nav__cta">Связаться</a>
@@ -140,48 +140,6 @@
   </div>
 </section>
 
-<!-- ===================== НАПРАВЛЕНИЯ ===================== -->
-<section class="section section--alt" id="directions">
-  <div class="container">
-    <header class="section__head reveal">
-      <p class="eyebrow">Направления</p>
-      <h2>Чем я занимаюсь</h2>
-    </header>
-    <div class="cards cards--5">
-      <article class="card reveal">
-        <span class="card__num">01</span>
-        <h3>Ушу</h3>
-        <p>Спортивное и традиционное ушу. Комплексы без оружия и с оружием: мечи, копья, алебарды, палки.</p>
-      </article>
-      <article class="card reveal">
-        <span class="card__num">02</span>
-        <h3>Кунг-фу</h3>
-        <p>Индивидуальная и групповая работа над техникой, общая и специальная физическая подготовка, подготовка к выступлениям и соревнованиям.</p>
-      </article>
-      <article class="card reveal">
-        <span class="card__num">03</span>
-        <h3>Туйшоу</h3>
-        <p>Вид безопасной борьбы. Тренировки по туйшоу на месте и в движении, подготовка к турнирам и фестивалям.</p>
-      </article>
-      <article class="card reveal">
-        <span class="card__num">04</span>
-        <h3>Цигун</h3>
-        <p>Практика для психологической подготовки и глубокой работы с телом.</p>
-      </article>
-      <article class="card reveal">
-        <span class="card__num">05</span>
-        <h3>Тайцзицюань</h3>
-        <p>Практика тайцзицюань: глубокая работа с телом, которая дополняет спортивную подготовку.</p>
-      </article>
-    </div>
-    <div class="gallery reveal">
-      <figure><img src="/images/photo-practice.jpg" width="1400" height="1400" alt="Парная практика туйшоу в зале" loading="lazy"></figure>
-      <figure><img src="/images/photo-competition.jpg" width="1400" height="1400" alt="Поединок туйшоу на соревнованиях" loading="lazy"></figure>
-      <!-- ЗАГЛУШКА: фото со старого сайта wushu-life.tb.ru, подписи нейтральные. Заменить на актуальные при наличии. -->
-    </div>
-  </div>
-</section>
-
 <!-- ===================== ЗАНЯТИЯ И ЗАЛЫ ===================== -->
 <section class="section" id="classes">
   <div class="container">
@@ -193,7 +151,10 @@
       <div class="academy__intro">
         <img class="academy__logo" src="/images/logo-akbi.png" width="239" height="128" alt="Логотип АКБИ — Академия Китайских Боевых Искусств" loading="lazy">
         <p>АКБИ — это занятия спортивным и традиционным ушу и кунг-фу, комплексы с оружием и без, тренировки по туйшоу, цигун и тайцзицюань. Есть группы для начинающих и продолжающих, спортивная группа, туйшоу в движении и персональные занятия.</p>
-        <p class="badge badge--warn">Расписание и стоимость уточняйте у тренера</p>
+        <div class="badge-row">
+          <p class="badge badge--warn">Групповые тренировки</p>
+          <p class="badge badge--warn">Индивидуальные занятия</p>
+        </div>
         <!-- ЗАГЛУШКА: актуальное расписание и цены. Старый сайт wushu-life.tb.ru содержит такие данные (дни и время групп, цены: туйшоу для взрослых 8000 ₽,
              ушу для детей и подростков 5100 ₽, персональные занятия 10000 ₽ — период оплаты на сайте не указан), но они не подтверждены, поэтому на странице их нет.
              Ориентир по времени со старого сайта: начинающие Пн, Пт 16:30–17:30; продолжающие Пн, Ср, Пт 16:30–17:30; спортивная группа Пн, Ср, Пт 17:30–20:00;
@@ -210,21 +171,55 @@
           <li class="hall">
             <span class="hall__metro">м. Орехово</span>
             <span class="hall__days">Понедельник, среда, пятница</span>
+            <span class="hall__days">от 5 лет и старше</span>
           </li>
           <li class="hall">
             <span class="hall__metro">м. Домодедовская</span>
             <span class="hall__days">Вторник, четверг · ТЦ «Белград»</span>
+            <span class="hall__days">от 14 лет и старше</span>
           </li>
           <li class="hall">
             <span class="hall__metro">м. Коломенская</span>
             <span class="hall__days">Суббота, воскресенье · персональные занятия</span>
           </li>
         </ul>
-        <p class="note">Точные адреса, группы и время занятий уточняйте у тренера: расписание обновляется.</p>
+        <p class="note">Точные адреса, группы и время занятий уточняйте. Пробное групповое занятие бесплатно.</p>
         <!-- ЗАГЛУШКА: дни и метро взяты со старого сайта wushu-life.tb.ru, точные адреса залов не указывались. Подтвердить актуальность. -->
         <a class="btn btn--primary" href="#contacts">Записаться на пробное занятие</a>
         <!-- ЗАГЛУШКА: наличие и условия пробного занятия не подтверждены. Если пробного нет, заменить текст кнопки на «Узнать о записи». -->
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== НАПРАВЛЕНИЯ ===================== -->
+<section class="section section--alt" id="directions">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">Направления</p>
+      <h2>Наша специализация</h2>
+    </header>
+    <div class="cards cards--3">
+      <article class="card reveal">
+        <span class="card__num">01</span>
+        <h3>Таолу (формы)</h3>
+        <p>Спортивное и традиционное ушу (кунг-фу). Комплексы без оружия и с оружием: мечи, копья, алебарды, палки.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">02</span>
+        <h3>Туйшоу</h3>
+        <p>Вид безопасной борьбы. Тренировки по туйшоу на месте и в движении, подготовка к турнирам и фестивалям.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">03</span>
+        <h3>Цигун и Тайцзицюань</h3>
+        <p>Практика для глубокой работы с телом, дыханием и сознанием.</p>
+      </article>
+    </div>
+    <div class="gallery reveal">
+      <figure><img src="/images/photo-practice.jpg" width="1400" height="1400" alt="Парная практика туйшоу в зале" loading="lazy"></figure>
+      <figure><img src="/images/photo-competition.jpg" width="1400" height="1400" alt="Поединок туйшоу на соревнованиях" loading="lazy"></figure>
+      <!-- ЗАГЛУШКА: фото со старого сайта wushu-life.tb.ru, подписи нейтральные. Заменить на актуальные при наличии. -->
     </div>
   </div>
 </section>
